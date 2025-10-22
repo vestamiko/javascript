@@ -286,4 +286,46 @@ console.log(fruits);
 console.log(unikalusVaisiai);
 
 ////////// 4.
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 === 0) {
+    numbers[i] = "Petras";
+  }
+}
+for (let i = 0; i < numbers.length; i++) {
+  if (typeof numbers[i] === "string") {
+    // typeof tikrina ar elementas yra tekstas
+    numbers[i] = numbers[i].toUpperCase();
+  }
+}
+console.log(numbers);
+
+/////////////////////// 4. pratybos
+let duomenys = {
+  id: "0001",
+  type: "donut",
+  name: "Cake",
+  ppu: 0.55,
+  topping: [
+    { id: "5001", type: "None" },
+    { id: "5002", type: "Glazed" },
+    { id: "5005", type: "Sugar" },
+    { id: "5007", type: "Powdered Sugar" },
+    { id: "5006", type: "Chocolate with Sprinkles" },
+    { id: "5003", type: "Chocolate" },
+    { id: "5004", type: "Maple" },
+  ],
+};
+duomenys.topping.forEach((el) => {
+  Object.keys(el).map((element) => {
+    console.log(`${element}: ${item[element]}`);
+  })
+});
+
+duomenys.topping.forEach((el) => {
+  console.log(el);
+  let text = Object.entries(el)
+.map(([key, val]) => `${key}: ${val}`)
+.join(", ")
+})
