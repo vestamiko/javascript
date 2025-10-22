@@ -320,12 +320,13 @@ let duomenys = {
 duomenys.topping.forEach((el) => {
   Object.keys(el).map((element) => {
     console.log(`${element}: ${item[element]}`);
-  })
+  });
 });
 
 duomenys.topping.forEach((el) => {
   console.log(el);
   let text = Object.entries(el)
-.map(([key, val]) => `${key}: ${val}`)
-.join(", ")
-})
+    .map(([key, val]) => `${key}: ${val}`)
+    .join(", ");
+  console.log(text);
+});
