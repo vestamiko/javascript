@@ -302,31 +302,87 @@ for (let i = 0; i < numbers.length; i++) {
 console.log(numbers);
 
 /////////////////////// 4. pratybos
-let duomenys = {
-  id: "0001",
-  type: "donut",
-  name: "Cake",
-  ppu: 0.55,
-  topping: [
-    { id: "5001", type: "None" },
-    { id: "5002", type: "Glazed" },
-    { id: "5005", type: "Sugar" },
-    { id: "5007", type: "Powdered Sugar" },
-    { id: "5006", type: "Chocolate with Sprinkles" },
-    { id: "5003", type: "Chocolate" },
-    { id: "5004", type: "Maple" },
-  ],
-};
-duomenys.topping.forEach((el) => {
-  Object.keys(el).map((element) => {
-    console.log(`${element}: ${item[element]}`);
-  });
-});
+// let duomenys = {
+//   id: "0001",
+//   type: "donut",
+//   name: "Cake",
+//   ppu: 0.55,
+//   topping: [
+//     { id: "5001", type: "None" },
+//     { id: "5002", type: "Glazed" },
+//     { id: "5005", type: "Sugar" },
+//     { id: "5007", type: "Powdered Sugar" },
+//     { id: "5006", type: "Chocolate with Sprinkles" },
+//     { id: "5003", type: "Chocolate" },
+//     { id: "5004", type: "Maple" },
+//   ],
+// };
+// duomenys.topping.forEach((el) => {
+//   Object.keys(el).map((element) => {
+//     console.log(`${element}: ${item[element]}`);
+//   });
+// });
 
-duomenys.topping.forEach((el) => {
-  console.log(el);
-  let text = Object.entries(el)
-    .map(([key, val]) => `${key}: ${val}`)
-    .join(", ");
-  console.log(text);
-});
+// duomenys.topping.forEach((el) => {
+//   console.log(el);
+//   let text = Object.entries(el)
+//     .map(([key, val]) => `${key}: ${val}`)
+//     .join(", ");
+//   console.log(text);
+// });
+
+const family = {
+  granparents: {
+    grandma: "Marge",
+    grandpa: "Homer",
+  },
+  parents: {
+    mom: "Lisa",
+    dad: "Millhouse",
+  },
+  children: {
+    daughter: "Anne",
+    son1: "Peter",
+    son2: "Bob",
+  },
+};
+
+console.log(
+  `grandparents: ${family.granparents.grandma}, ${family.granparents.grandpa}`
+);
+console.log(
+  `parents: ${family.parents.mom}, ${family.parents.dad}`
+);
+console.log(
+  `children: ${family.children.daughter}, ${family.children.son1}, ${family.children.son2}`
+);
+
+ const books = [
+  {
+    isbn: "9786094442742",
+    price: 5.99,
+    year: 2004,
+    title: "Bėgėgial",
+    pagecount: 777,
+  },
+  {
+    isbn: "9786094442490",
+    price: 14.99,
+    year: 2019,
+    title: "Klaijūnai",
+    pagecount: 172,
+  },
+  {
+    isbn: "9786094444386",
+    price: 8.99,
+    year: 2015,
+    title: "Mergina, kuri pakliuvo į voratinklį",
+    pagecount: 356,
+},
+];
+
+const booksAfter2015 = books
+  .filter(book => book.year > 2015)
+  .map(book => book.title);
+
+console.log(booksAfter2015);
